@@ -1,0 +1,403 @@
+
+import React from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  FlatList,
+  Platform,
+  StatusBar,
+  Dimensions,
+  Touchable
+} from "react-native"; 
+import BackgroundImage from "../assets/images/Hawkesbury-River.jpg";
+import {Ionicons} from  '@expo/vector-icons';
+import Card from "../components/Card";
+import dummydata from "../constants/dummydata";
+import dummyeventdata from "../constants/dummyeventdata";
+import categoryarray from "../constants/categoryarray";
+const categories = [
+  {
+    id: 1,
+    name: "Coffee Shops",
+    image: "https://static.thenounproject.com/png/588652-200.png",
+  },
+  {
+    id: 2,
+    name: "Restaurants",
+    image: "https://static.thenounproject.com/png/158984-200.png",
+  },
+  {
+    id: 3,
+    name: "Shopping Centres",
+    image: "https://static.thenounproject.com/png/1568366-200.png",
+  },
+  {
+    id: 4,
+    name: "Medical",
+    image:
+      "https://static.thenounproject.com/png/156901-200.png",
+  },
+  {
+    id: 5,
+    name: "Accommodation",
+    image: "https://static.thenounproject.com/png/4398-200.png",
+  },
+  {
+    id: 6,
+    name: "Schools",
+    image: "https://static.thenounproject.com/png/1853606-200.png",
+  },
+  {
+    id: 7,
+    name: "Trades",
+    image: "https://static.thenounproject.com/png/686718-200.png",
+  },
+  {
+    id: 8,
+    name: "Business Services",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+];
+const attractions = [
+  {
+    id: 1,
+    name: "Museums",
+    image: "https://static.thenounproject.com/png/3129-200.png",
+  },
+  {
+    id: 2,
+    name: "Monuments",
+    image: "https://static.thenounproject.com/png/95211-200.png",
+  },
+  {
+    id: 3,
+    name: "Parks",
+    image: "https://cdn-icons-png.flaticon.com/128/2069/2069441.png",
+  },
+  {
+    id: 4,
+    name: "Bushwalks",
+    image: "https://cdn-icons-png.flaticon.com/128/2069/2069441.png",
+  },
+];
+const businesses =[
+    {
+        name:'Hawkesbury Valley Electrics',
+        address:'9/62 Argyle Street, South Windsor NSW 2756',
+        openinghours:'24 hours',
+        image:'http://www.hve.com.au/wp-content/uploads/2020/02/HVE-300x150.jpg'
+    },
+    {
+        name:'Hawkesbury Regional Museum',
+        address:'8 Baker Street, Windsor NSW 2756',
+        openinghours:'9am - 5pm',
+        image:'http://www.hve.com.au/wp-content/uploads/2020/02/HVE-300x150.jpg'
+    },
+    {
+        name:'Richmond Vale Railway Museum',
+        address:'262 Leggetts Drive, Richmond Vale NSW 2323',
+        openinghours:'NA',
+        image:'https://www.richmondvalerailwaymuseum.org/wp-content/uploads/2018/11/richmond-vale-railway-museum.png'
+    },
+    {
+        name:'North West Plumbing and Drainage Pty LTD',
+        address:'24 Jamison Crescent, North Richmond NSW 2754',
+        openinghours:'24 hours',
+        image:'https://www.nwplumbinganddrainage.com.au/wp-content/uploads/2018/10/logo.png'
+    },
+]
+export default function HomeScreen({ navigation }) {
+  const onclick = item => {
+    navigation.navigate({
+      name: 'Details',
+      params: {data: item},
+    });
+  };
+  const onCategoryPress = item => {
+    navigation.navigate({
+      name: 'BusinessListing',
+      params: {data: item},
+    });
+  };
+  
+
+  return (
+    <View style={styles.container}>
+      <StatusBar
+      backgroundColor={"#fff"}
+      translucent={true}
+      barStyle={"light-content"}
+      />
+      <View
+        style={{
+          
+          width:'100%'
+        }}
+      >
+        <Image
+        source={BackgroundImage}  
+        style={{
+          width: "100%",
+          height:200,
+          alignSelf: "center",
+          paddingHorizontal: 15,
+        }}/>
+        <View
+        style={{
+          width: "90%",
+          alignSelf: "center",
+          padding: 10,
+          paddingVertical: 5,
+          borderWidth: 1,
+          borderColor: "#000",
+          borderRadius: 10,
+          flexDirection:'row',
+          marginTop: -30,
+          backgroundColor: "#fff"
+        }}
+      ><Ionicons name="search-outline" size={32} />
+        <TextInput 
+          style={{
+            backgroundColor: "#fff",
+            width: "90%",
+            height: "80%",
+            alignSelf: "center",
+           
+            paddingHorizontal: 10,
+          }}
+          placeholder="Search"
+        //   onChangeText={(text)=>{
+        //     setEmailAddress(text);
+        //   }}
+         // value={emailAddress}
+        />
+        
+      </View>
+      </View>
+      <View
+        style={{
+          width: "95%",
+          alignSelf: "center",
+          paddingHorizontal: 15,
+        }}
+      >
+        <Text
+        style={{
+          fontSize: 25,
+          fontWeight: "bold",
+          marginVertical: 5,
+
+        }}
+        >
+        Business Directory of the Hawkesbury
+        </Text>
+        <FlatList
+          data={categories}
+          contentContainerStyle = {{paddingVertical: 10}}
+          horizontal={true}
+          showsHorizontalScrollIndicator = {false}
+          renderItem={({ item, index }) => {
+            return (
+              <TouchableOpacity
+              onPress = {()=>onCategoryPress(item)}
+                style={{
+                  // width: "25%",
+                  marginTop: 10,
+                  marginLeft: index == 0 ?0:10,
+                  backgroundColor:'#FFFFFF',
+                  alignItems:'center',
+                  // width: 80,
+                  justifyContent: 'center',
+                  paddingVertical: 5,
+                  // borderRadius: 15,
+                  borderWidth: 1,
+                  borderColor: '#000',
+                  height: Dimensions.get('window').height * 0.1,
+                  width: Dimensions.get('window').width * 0.2,
+                  borderRadius: Math.round((Dimensions.get('window').height + Dimensions.get('window').width) / 2)
+                }}
+              >
+                <Image source={{ uri: item.image }} style={{height:30,width:30}} resizeMode='contain'/>
+                <Text style={{
+            fontSize: 10,
+            fontWeight: "bold",
+            textAlign: 'center',
+            marginTop: 5
+          }}>{item.name}</Text>
+              </TouchableOpacity>
+            );
+          }}
+        />
+        <Text
+          style={{
+            fontSize: 25,
+            fontWeight: "bold",
+            marginVertical: 5
+          }}
+        >
+         Events Happening in the Hawkesbury
+        </Text>
+        
+        {/* <FlatList
+          data={categories}
+          horizontal={true}
+          contentContainerStyle = {{padding: 10}}
+          showsHorizontalScrollIndicator = {false}
+          renderItem={({ item, index }) => {
+            return (
+              <View
+                style={{
+                  // width: "25%",
+                  marginLeft: index == 0?0:10,
+                  backgroundColor:'#FFFFFF',
+                  alignItems:'center',
+                  width: 200,
+                  height:150,
+                  justifyContent: 'center',
+                  paddingVertical: 5,
+                  borderRadius: 7,
+                  shadowColor: '#000000',
+                  shadowOffset: {width: 2, height: 2},
+                  shadowOpacity: 0.9,
+                  shadowRadius: 3,
+                  elevation: 3,
+                }}
+              >
+                <Image source={{ uri: item.image }} style={{height:30,width:30}} resizeMode='contain'/>
+                <Text style={{
+            fontSize: 12,
+            fontWeight: "bold",
+            width:'90%',
+            textAlign: 'center',
+            marginTop: 5
+          }}>{item.name}</Text>
+              </View>
+            );
+          }}
+        /> */}
+        
+        {/* <FlatList
+          data={dummyeventdata}
+          horizontal={true}
+        //  contentContainerStyle = {{paddingBottom: 500}}
+          showsHorizontalScrollIndicator = {false}
+          renderItem={({ item, index }) => {
+            return (
+              <TouchableOpacity
+              onPress = {()=>onclick(item)}
+                style={{
+                  height: 220,
+                  shadowColor: '#000000',
+                  shadowOffset: {width: 2, height: 2},
+                  shadowOpacity: 0.9,
+                  shadowRadius: 3,
+                  elevation: 3,
+                  // width: "25%",
+                   marginLeft: index == 0?0:15,
+                  width: '100',
+                  borderRadius: 5,
+                  borderWidth: 1,
+                }}
+              >  
+          <Card data = {item}/>
+          </TouchableOpacity>
+            );
+          }}
+        /> */}
+         <FlatList
+          data={categoryarray}
+          contentContainerStyle = {{paddingVertical: 10}}
+          horizontal={true}
+          showsHorizontalScrollIndicator = {false}
+          renderItem={({ item, index }) => {
+            return (
+              <TouchableOpacity
+                style={{
+                  // width: "25%",
+                  marginLeft: index == 0?0:10,
+                  backgroundColor:'#FFFFFF',
+                  alignItems:'center',
+                  overflow: 'hidden',
+                  // width: 100,
+                  //justifyContent: 'center',
+                  borderRadius: 5,
+                  borderColor: '#000',
+                  borderWidth: 1,
+                  //height: Dimensions.get('window').height * 0.15,
+                  width: Dimensions.get('window').height * 0.14,
+                }}
+              >
+                <Image source={{ uri: item.image }} style={{height:80,width:"100%"}} resizeMode='cover'/>
+                <Text style={{
+            fontSize: 15,
+            fontWeight: "bold",
+            width:'90%',
+            textAlign: 'center',
+            marginVertical: 5
+          }}>{item.category}</Text>
+              </TouchableOpacity>
+            );
+          }}
+        />
+        <Text
+          style={{
+            fontSize: 25,
+            fontWeight: "bold",
+            marginVertical: 5
+          }}
+        >
+          Attractions in the Hawkesbury
+        </Text>
+        <FlatList
+          data={attractions}
+          contentContainerStyle = {{padding: 10}}
+          horizontal={true}
+          showsHorizontalScrollIndicator = {false}
+          renderItem={({ item, index }) => {
+            return (
+              <TouchableOpacity
+                style={{
+                  // width: "25%",
+                  marginLeft: index == 0?0:10,
+                  backgroundColor:'#FFFFFF',
+                  alignItems:'center',
+                  width: 100,
+                  justifyContent: 'center',
+                  paddingVertical: 5,
+                  borderRadius: 15,
+                  shadowColor: '#000000',
+                  shadowOffset: {width: 2, height: 2},
+                  shadowOpacity: 0.9,
+                  shadowRadius: 3,
+                  elevation: 3,
+                }}
+              >
+                <Image source={{ uri: item.image }} style={{height:30,width:30}} resizeMode='contain'/>
+                <Text style={{
+            fontSize: 12,
+            fontWeight: "bold",
+            width:'90%',
+            textAlign: 'center',
+            marginTop: 5
+          }}>{item.name}</Text>
+              </TouchableOpacity>
+            );
+          }}
+        />
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    //justifyContent: "center",
+  },
+});
