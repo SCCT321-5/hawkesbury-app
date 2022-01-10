@@ -25,7 +25,7 @@ export default function DetailsScreen({ navigation, route }) {
         <Text style={{ marginLeft: 5 }}>{route.params?.data.openinghours}</Text>
       </View>
       {route.params?.data.enteryfees && <View style={{ flexDirection: "row",alignItems: 'center', paddingTop: 10 }}>
-        <Text style={{ fontWeight:'bold' }}>Entery Fees :</Text>
+        <Text style={{ fontWeight:'bold' }}>Entry Fees :</Text>
         <Text style={{ marginLeft: 5 }}>{route.params?.data.enteryfees}</Text>
       </View>}
       <View style={{ flexDirection: "row",alignItems: 'center', paddingTop: 10 }}>
@@ -59,8 +59,7 @@ export default function DetailsScreen({ navigation, route }) {
           coordinate={{
             latitude:route.params?.data.coordinate.latitude,
           longitude:route.params?.data.coordinate.longitude,
-          }}
-          title={'Hiiiii'}/>
+          }}/>
         </MapView>
       </View>
     </View>

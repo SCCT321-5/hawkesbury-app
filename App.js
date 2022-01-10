@@ -5,10 +5,11 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SplashScreen from './src/screens/SplashScreen';
-import Login from './src/screens/Login';
-import Register from './src/screens/Register';
+// import Login from './src/screens/Login';
+// import Register from './src/screens/Register';
 import MyTabs from './src/screens/TabScreen';
 import DetailsScreen from './src/screens/DetailsScreen';
+import InformationScreen from './src/screens/InformationScreen';
 
 import EventDetailsScreen from './src/screens/EventDetailsScreen'; 
 const Stack = createNativeStackNavigator();
@@ -45,6 +46,7 @@ function App() {
         },
 }}/>
         </Stack.Navigator>
+        
     </NavigationContainer>
   );
 }

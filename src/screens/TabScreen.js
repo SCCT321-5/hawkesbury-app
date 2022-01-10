@@ -1,14 +1,15 @@
 
 import * as React from "react";
-import { View,Text} from "react-native";
+import { View,Text, ImagePropTypes} from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "./HomeScreen";
 import {Ionicons} from  '@expo/vector-icons';
-import ProfileScreen from "./ProfileScreen";
+// import ProfileScreen from "./ProfileScreen";
 import SearchScreen from "./SearchScreen";
 import BusinessListingScreen from "./BusinessListingScreen";
 import CalendarOfEventsScreen from "./CalendarOfEventsScreen";
 import PointsOfInterestScreen from "./PointsOfInterestScreen";
+import InformationScreen from "./InformationScreen";
 import MapsScreen from "./MapsScreen";
 
 const Tab = createBottomTabNavigator();
@@ -117,6 +118,19 @@ export default function MyTabs() {
            justifyContent:'space-around',alignItems:'center'}}>
              <Ionicons name="map-outline" color={focused ? '#2A5C99' :'#bbb'} size={25}  />
              <Text style={{color:focused ? '#2A5C99' :'#bbb'}}>Maps</Text>
+           </View>,
+         headerShown: false
+       })}
+     />
+     <Tab.Screen
+       name="Information"
+       component={InformationScreen}
+       options={({ navigation }) => ({
+         tabBarIcon: ({focused }) => <View style={{
+           height:'90%',
+           justifyContent:'space-around',alignItems:'center'}}>
+             <Ionicons name="information-circle-outline" color={focused ? '#2A5C99' :'#bbb'} size={25}  />
+             <Text style={{color:focused ? '#2A5C99' :'#bbb'}}>Info</Text>
            </View>,
          headerShown: false
        })}

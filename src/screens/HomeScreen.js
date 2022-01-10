@@ -11,7 +11,7 @@ import {
   Platform,
   StatusBar,
   Dimensions,
-  Touchable
+  Touchable, 
 } from "react-native"; 
 import BackgroundImage from "../assets/images/Hawkesbury-River.jpg";
 import {Ionicons} from  '@expo/vector-icons';
@@ -109,6 +109,12 @@ const businesses =[
         openinghours:'24 hours',
         image:'https://www.nwplumbinganddrainage.com.au/wp-content/uploads/2018/10/logo.png'
     },
+];
+const information =[
+  {
+      name:'Information',
+      image: "https://upload.wikimedia.org/wikipedia/commons/4/43/Minimalist_info_Icon.png"
+  },
 ]
 export default function HomeScreen({ navigation }) {
   const onclick = item => {
@@ -123,9 +129,30 @@ export default function HomeScreen({ navigation }) {
       params: {data: item},
     });
   };
+  const oneventPress = item => {
+    navigation.navigate({
+      name: 'CalendarOfEvents',
+      params: {data: item},
+    });
+  };
+  const onAttractionPress = item => {
+    navigation.navigate({
+      name: 'PointsOfInterest',
+      params: {data: item},
+    });
+  };
+  const onInfoPress = item => {
+    navigation.navigate({
+      name: 'Information',
+      params: {data: item},
+    });
+  };
   
 
   return (
+   
+
+    
     <View style={styles.container}>
       <StatusBar
       backgroundColor={"#fff"}
@@ -157,7 +184,7 @@ export default function HomeScreen({ navigation }) {
           borderRadius: 10,
           flexDirection:'row',
           marginTop: -30,
-          backgroundColor: "#fff"
+          backgroundColor: "#fff",
         }}
       ><Ionicons name="search-outline" size={32} />
         <TextInput 
@@ -170,10 +197,6 @@ export default function HomeScreen({ navigation }) {
             paddingHorizontal: 10,
           }}
           placeholder="Search"
-        //   onChangeText={(text)=>{
-        //     setEmailAddress(text);
-        //   }}
-         // value={emailAddress}
         />
         
       </View>
@@ -190,10 +213,10 @@ export default function HomeScreen({ navigation }) {
           fontSize: 25,
           fontWeight: "bold",
           marginVertical: 5,
-
+          marginTop: 30,
         }}
         >
-        Business Directory of the Hawkesbury
+        Business Directory
         </Text>
         <FlatList
           data={categories}
@@ -205,15 +228,13 @@ export default function HomeScreen({ navigation }) {
               <TouchableOpacity
               onPress = {()=>onCategoryPress(item)}
                 style={{
-                  // width: "25%",
-                  marginTop: 10,
+                  marginTop: -5,
+                  marginBottom: 10,
                   marginLeft: index == 0 ?0:10,
                   backgroundColor:'#FFFFFF',
                   alignItems:'center',
-                  // width: 80,
                   justifyContent: 'center',
                   paddingVertical: 5,
-                  // borderRadius: 15,
                   borderWidth: 1,
                   borderColor: '#000',
                   height: Dimensions.get('window').height * 0.1,
@@ -232,82 +253,21 @@ export default function HomeScreen({ navigation }) {
             );
           }}
         />
+        
         <Text
           style={{
             fontSize: 25,
             fontWeight: "bold",
-            marginVertical: 5
+            marginVertical: 5,
+            marginTop: 1.5
           }}
         >
-         Events Happening in the Hawkesbury
+         Calendar of Events
         </Text>
         
-        {/* <FlatList
-          data={categories}
-          horizontal={true}
-          contentContainerStyle = {{padding: 10}}
-          showsHorizontalScrollIndicator = {false}
-          renderItem={({ item, index }) => {
-            return (
-              <View
-                style={{
-                  // width: "25%",
-                  marginLeft: index == 0?0:10,
-                  backgroundColor:'#FFFFFF',
-                  alignItems:'center',
-                  width: 200,
-                  height:150,
-                  justifyContent: 'center',
-                  paddingVertical: 5,
-                  borderRadius: 7,
-                  shadowColor: '#000000',
-                  shadowOffset: {width: 2, height: 2},
-                  shadowOpacity: 0.9,
-                  shadowRadius: 3,
-                  elevation: 3,
-                }}
-              >
-                <Image source={{ uri: item.image }} style={{height:30,width:30}} resizeMode='contain'/>
-                <Text style={{
-            fontSize: 12,
-            fontWeight: "bold",
-            width:'90%',
-            textAlign: 'center',
-            marginTop: 5
-          }}>{item.name}</Text>
-              </View>
-            );
-          }}
-        /> */}
+        {}
         
-        {/* <FlatList
-          data={dummyeventdata}
-          horizontal={true}
-        //  contentContainerStyle = {{paddingBottom: 500}}
-          showsHorizontalScrollIndicator = {false}
-          renderItem={({ item, index }) => {
-            return (
-              <TouchableOpacity
-              onPress = {()=>onclick(item)}
-                style={{
-                  height: 220,
-                  shadowColor: '#000000',
-                  shadowOffset: {width: 2, height: 2},
-                  shadowOpacity: 0.9,
-                  shadowRadius: 3,
-                  elevation: 3,
-                  // width: "25%",
-                   marginLeft: index == 0?0:15,
-                  width: '100',
-                  borderRadius: 5,
-                  borderWidth: 1,
-                }}
-              >  
-          <Card data = {item}/>
-          </TouchableOpacity>
-            );
-          }}
-        /> */}
+        {}
          <FlatList
           data={categoryarray}
           contentContainerStyle = {{paddingVertical: 10}}
@@ -316,18 +276,15 @@ export default function HomeScreen({ navigation }) {
           renderItem={({ item, index }) => {
             return (
               <TouchableOpacity
+              onPress = {()=>oneventPress(item)}
                 style={{
-                  // width: "25%",
                   marginLeft: index == 0?0:10,
                   backgroundColor:'#FFFFFF',
                   alignItems:'center',
                   overflow: 'hidden',
-                  // width: 100,
-                  //justifyContent: 'center',
                   borderRadius: 5,
                   borderColor: '#000',
                   borderWidth: 1,
-                  //height: Dimensions.get('window').height * 0.15,
                   width: Dimensions.get('window').height * 0.14,
                 }}
               >
@@ -347,10 +304,11 @@ export default function HomeScreen({ navigation }) {
           style={{
             fontSize: 25,
             fontWeight: "bold",
-            marginVertical: 5
+            marginVertical: 5,
+            marginTop: 1.5,
           }}
         >
-          Attractions in the Hawkesbury
+          Hawkesbury Attractions
         </Text>
         <FlatList
           data={attractions}
@@ -360,8 +318,8 @@ export default function HomeScreen({ navigation }) {
           renderItem={({ item, index }) => {
             return (
               <TouchableOpacity
+              onPress = {()=>onAttractionPress(item)}
                 style={{
-                  // width: "25%",
                   marginLeft: index == 0?0:10,
                   backgroundColor:'#FFFFFF',
                   alignItems:'center',
@@ -383,11 +341,58 @@ export default function HomeScreen({ navigation }) {
             width:'90%',
             textAlign: 'center',
             marginTop: 5
-          }}>{item.name}</Text>
+          }}>{item.name}</Text> 
               </TouchableOpacity>
             );
           }}
         />
+         <Text
+          style={{
+            fontSize: 25,
+            fontWeight: "bold",
+            marginVertical: 5,
+            marginTop: 1.5,
+          }}
+        >
+         About the Hawkesbury Region
+        </Text>
+        <FlatList
+          data={information}
+          contentContainerStyle = {{padding: 10}}
+          horizontal={true}
+          showsHorizontalScrollIndicator = {false}
+          renderItem={({ item, index }) => {
+            return (
+              <TouchableOpacity
+              onPress = {()=>onInfoPress(item)}
+                style={{
+                  marginLeft: index == 0?0:10,
+                  backgroundColor:'#FFFFFF',
+                  alignItems:'center',
+                  width: 100,
+                  justifyContent: 'center',
+                  paddingVertical: 5,
+                  borderRadius: 15,
+                  shadowColor: '#000000',
+                  shadowOffset: {width: 2, height: 2},
+                  shadowOpacity: 0.9,
+                  shadowRadius: 3,
+                  elevation: 3,
+                }}
+              >
+                <Image source={{ uri: item.image }} style={{height:30,width:30}} resizeMode='contain'/>
+                <Text style={{
+            fontSize: 12,
+            fontWeight: "bold",
+            width:'90%',
+            textAlign: 'center',
+            marginTop: 5
+          }}>{item.name}</Text> 
+              </TouchableOpacity>
+            );
+          }}
+        />
+        
       </View>
     </View>
   );
@@ -398,6 +403,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    //justifyContent: "center",
   },
 });

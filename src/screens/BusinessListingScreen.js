@@ -8,9 +8,13 @@ import businesslistingarray from '../constants/businesslistingarray';
 import dummydata from '../constants/dummydata';
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
+import { Button, Snackbar } from 'react-native-paper';
 
 export default function BusinessListingScreen({navigation,route}) {
+  
   //const [rData, setRData] = React.useState(businesslistingarray); 
+  const category=route.params?.data.name ==undefined?"undefined":route.params?.data.name;
+  console.log(category);
    const [rData, setRData] = React.useState([]);
     const [searchtext, setSearch] = React.useState(''); 
     const onclick = item => {
@@ -29,9 +33,15 @@ export default function BusinessListingScreen({navigation,route}) {
     setRData(newData);
     setSearch(text)
   };
+  
 React.useEffect(() => {
+  console.log(rData);
   //alert(route.params?.data.name)
    if(route.params?.data.name !== undefined){
+      var results = dummydata.filter(
+        (data) => data.category === route.params?.data.name
+      );
+    //  alert("selected")
 
 var results = dummydata.filter(
       data => data.category === route.params?.data.name,
@@ -41,9 +51,11 @@ var results = dummydata.filter(
    }
    else{
      setRData(dummydata);
+    //  alert("unselected")
    }
     //alert(results);
-  }, [dummydata]);
+  }, [category]);
+  
   return (
     <View style={styles.container}>
         <StatusBar
@@ -79,8 +91,8 @@ var results = dummydata.filter(
             paddingHorizontal: 10,
           }}
           value={searchtext}
-          placeholder={'Search'}
-          onChange={(text) => handleSearch(text)}
+          placeholder={route.params?.data.name}
+          onChange={(text) => handleSearch(route.params?.data.name)}
         />
         
       </View>

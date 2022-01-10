@@ -64,7 +64,7 @@ const dummydata = [
     description: `Shop anything`,
 
     openinghours: "9am-5:30pm",
-    image: "https://thesecondhomecafe.com.au/wp-content/uploads/2019/05/logo.png",
+    image: "https://dogcentral.com.au/wp-content/uploads/2021/02/the-second-home-cafe.jpeg",
     phonenumber:"0403 088 828",
     website:"https://thesecondhomecafe.com.au/",
     rating: 4,
@@ -89,7 +89,7 @@ const dummydata = [
     description: `Coffee Special`,
 
     openinghours: "7am-3pm",
-    image: "https://www.cafecornerstone.com.au/wp-content/uploads/2016/06/Cornerstone1-WEB1-copy.png",
+    image: "https://www.top4.com.au/custom/domain_1/image_files/191_photo_390632.jpg",
     phonenumber:"0431 756 778",
     website:"https://cafecornerstone.com.au",
 
@@ -123,6 +123,32 @@ const dummydata = [
     rating: 4,
 
     reviews: 205,
+
+    liked: true,
+    
+  },
+  {
+    id: "6",
+
+    coordinate: {
+      latitude: -33.68327292441513,
+
+      longitude: 151.02621328230293,
+    },
+    name: "Biviano's Italian Restaurant",
+    category: "Restaurants",
+    address: "628 Old Northern Road Dural NSW 2158",
+
+    description: `Italian & Seafood Restaurant`,
+
+    openinghours: "11:30am-4pm 5-10pm",
+    image: "https://www.hawkesburyaustralia.com.au/_images/logos/biv.png.jpg",
+    phonenumber:"02 9651 2022",
+    website:"https://bivianosdural.com/",
+
+    rating: 4,
+
+    reviews: 690,
 
     liked: true,
     

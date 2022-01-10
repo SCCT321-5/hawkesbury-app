@@ -54,8 +54,7 @@ export default function EventDetailsScreen({ navigation, route }) {
           coordinate={{
             latitude:route.params?.data.coordinate.latitude,
           longitude:route.params?.data.coordinate.longitude,
-          }}
-          title={'Hiiiii'}/>
+          }}/>
         </MapView>
       </View>
     </View>
