@@ -22,43 +22,43 @@ import categoryarray from "../constants/categoryarray";
 const categories = [
   {
     id: 1,
-    name: "Coffee Shops",
-    image: "https://static.thenounproject.com/png/588652-200.png",
-  },
-  {
-    id: 2,
-    name: "Restaurants",
+    name: "Cafes, Restaurants and Catering",
     image: "https://static.thenounproject.com/png/158984-200.png",
   },
   {
-    id: 3,
-    name: "Shopping Centres",
+    id: 2,
+    name: "General Retail",
     image: "https://static.thenounproject.com/png/1568366-200.png",
   },
   {
-    id: 4,
-    name: "Medical",
+    id: 3,
+    name: "Health and Disability Services",
     image:
       "https://static.thenounproject.com/png/156901-200.png",
   },
   {
-    id: 5,
+    id: 4,
     name: "Accommodation",
     image: "https://static.thenounproject.com/png/4398-200.png",
   },
   {
-    id: 6,
-    name: "Schools",
+    id: 5,
+    name: "Education, Training and Early Childhood",
     image: "https://static.thenounproject.com/png/1853606-200.png",
   },
   {
-    id: 7,
-    name: "Trades",
+    id: 6,
+    name: "Other Trades and Construction",
     image: "https://static.thenounproject.com/png/686718-200.png",
   },
   {
     id: 8,
     name: "Business Services",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+  {
+    id: 9,
+    name: "Electronics, IT and Media",
     image: "https://static.thenounproject.com/png/589380-200.png",
   },
 ];
