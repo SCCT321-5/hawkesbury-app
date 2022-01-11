@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
+import Hawkesbury from "../assets/images/hawkesbury.jpg";
 
 export default function InformationScreen() {
   return (
@@ -15,7 +16,8 @@ export default function InformationScreen() {
       >
         About the Hawkesbury
       </Text>
-      <Image src={}
+      <Image src={Hawkesbury}
+      />
       <Text
         style={{
           marginTop: 100,
@@ -34,6 +36,7 @@ export default function InformationScreen() {
         delights over multiple days. Plan ahead to participate in one of our
         many music and cultural festivals or other events throughout the year.
         There is always something new to discover in the Hawkesbury.
+        
       </Text>
     </View>
   );
