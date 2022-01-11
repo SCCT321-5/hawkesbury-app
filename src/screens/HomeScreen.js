@@ -22,73 +22,43 @@ import categoryarray from "../constants/categoryarray";
 const categories = [
   {
     id: 1,
-    name: "Cafes, Restaurants and Catering",
+    name: "Coffee Shops",
     image: "https://static.thenounproject.com/png/588652-200.png",
   },
   {
     id: 2,
-    name: "General Retail",
-    image: "https://static.thenounproject.com/png/1568366-200.png",
+    name: "Restaurants",
+    image: "https://static.thenounproject.com/png/158984-200.png",
   },
   {
     id: 3,
-    name: "Health and Disability Services",
+    name: "Shopping Centres",
+    image: "https://static.thenounproject.com/png/1568366-200.png",
+  },
+  {
+    id: 4,
+    name: "Medical",
     image:
       "https://static.thenounproject.com/png/156901-200.png",
   },
   {
-    id: 4,
+    id: 5,
     name: "Accommodation",
     image: "https://static.thenounproject.com/png/4398-200.png",
   },
   {
-    id: 5,
-    name: "Education, Training and Early Childhood",
+    id: 6,
+    name: "Schools",
     image: "https://static.thenounproject.com/png/1853606-200.png",
   },
   {
-    id: 6,
-    name: "Other Trades and Construction",
+    id: 7,
+    name: "Trades",
     image: "https://static.thenounproject.com/png/686718-200.png",
   },
   {
-    id: 7,
-    name: "Business Services",
-    image: "https://static.thenounproject.com/png/589380-200.png",
-  },
-  {
     id: 8,
-    name: "Agriculture and Animals",
-    image: "https://static.thenounproject.com/png/589380-200.png",
-  },
-  {
-    id: 9,
-    name: "Builders, Carpenters and Brick Layers",
-    image: "https://static.thenounproject.com/png/589380-200.png",
-  },
-  {
-    id: 10,
-    name: "Electrical and Air Conditioning",
-    image: "https://static.thenounproject.com/png/589380-200.png",
-  },
-  {
-    id: 11,
-    name: "Electronics, IT and Media",
-    image: "https://static.thenounproject.com/png/589380-200.png",
-  },
-  {
-    id: 12,
-    name: "Entertainment and the Arts",
-    image: "https://static.thenounproject.com/png/589380-200.png",
-  },
-  {
-    id: 13,
-    name: "Finance and Banking",
-    image: "https://static.thenounproject.com/png/589380-200.png",
-  },
-  {
-    id: 14,
-    name: "Finance and Banking",
+    name: "Business Services",
     image: "https://static.thenounproject.com/png/589380-200.png",
   },
 ];
