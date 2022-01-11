@@ -66,7 +66,7 @@ export default function PointsOfInterestScreen({ navigation, route }) {
           textAlign: "center",
         }}
       >
-        Attraction
+        Attractions
       </Text>
 
       <View
