@@ -23,7 +23,7 @@ const categories = [
   {
     id: 1,
     name: "Cafes, Restaurants and Catering",
-    image: "https://static.thenounproject.com/png/158984-200.png",
+    image: require('../assets/images/Cafes, Restaurants and Catering.jpg'),
   },
   {
     id: 2,
@@ -61,11 +61,86 @@ const categories = [
     name: "Electronics, IT and Media",
     image: "https://static.thenounproject.com/png/589380-200.png",
   },
+  {
+    id: 10,
+    name: "Agriculture and Animals",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+   {
+    id: 11,
+    name: "Builders, Carpenters and Brick Layers",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+   {
+    id: 12,
+    name: "Electrical and Air Conditioning",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+  {
+    id: 13,
+    name: "Entertainment and the Arts",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+   {
+    id: 14,
+    name: "Finance and Banking",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+   {
+    id: 15,
+    name: "Fitness and Sport",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+  {
+    id: 16,
+    name: "Food and Groceries Retail",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+   {
+    id: 17,
+    name: "Government and Not For Profit",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+  {
+    id: 18,
+    name: "Hair and Beauty",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+   {
+    id: 19,
+    name: "Manufacturing and Wholesale",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+    {
+    id: 20,
+    name: "Plumbers and Gas Fitters",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+   {
+    id: 21,
+    name: "Professionals and Scientific Services",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+  {
+    id: 22,
+    name: "Real Estate",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+   {
+    id: 23,
+    name: "Tourism and Events",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
+   {
+    id: 24,
+    name: "Vehicles, Transport and Warehousing",
+    image: "https://static.thenounproject.com/png/589380-200.png",
+  },
 ];
 const attractions = [
   {
     id: 1,
-    name: "Museums",
+    name: "Museums and History",
     image: "https://static.thenounproject.com/png/3129-200.png",
   },
   {
@@ -80,9 +155,40 @@ const attractions = [
   },
   {
     id: 4,
-    name: "Bushwalks",
+    name: "Adventure and Sports",
     image: "https://cdn-icons-png.flaticon.com/128/2069/2069441.png",
   },
+  {
+    id: 5,
+    name: "Artistic, Galleries and Gardens",
+    image: "https://cdn-icons-png.flaticon.com/128/2069/2069441.png",
+  },
+  {
+    id: 6,
+    name: "Farm Gate and Tastings",
+    image: "https://cdn-icons-png.flaticon.com/128/2069/2069441.png",
+  },
+  {
+    id: 7,
+    name: "The Big Things",
+    image: "https://cdn-icons-png.flaticon.com/128/2069/2069441.png",
+  },
+  {
+    id: 8,
+    name: "The River",
+    image: "https://cdn-icons-png.flaticon.com/128/2069/2069441.png",
+  },
+  {
+    id: 9,
+    name: "Trails and Towns",
+    image: "https://cdn-icons-png.flaticon.com/128/2069/2069441.png",
+  },
+  {
+    id: 10,
+    name: "Trails and Towns",
+    image: "https://cdn-icons-png.flaticon.com/128/2069/2069441.png",
+  },
+  
 ];
 const businesses =[
     {

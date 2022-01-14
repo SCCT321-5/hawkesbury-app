@@ -33,7 +33,7 @@ const dummydata = [
       longitude: 150.7444978975839,
     },
     name: "North Richmond Shopping Village",
-    category: "Shopping Centres",
+    category: "General Retail",
     address: "16/6 Riverview Street, North Richmond NSW 2754",
 
     description: `Shopping`,
@@ -58,7 +58,7 @@ const dummydata = [
       longitude: 150.75264416931512,
     },
     name: "The Second Home Cafe - Richmond",
-    category: "Coffee Shops",
+    category: "Cafes, Restaurants and Catering",
     address: "219 Windsor Street, Richmond NSW 2753",
 
     description: `Shop anything`,
@@ -83,7 +83,7 @@ const dummydata = [
     },
     
     name: "Cafe Cornerstone",
-    category: "Coffee Shops",
+    category: "Cafes, Restaurants and Catering",
     address: "190 Macquarie Street, Windsor NSW 2756",
 
     description: `Coffee Special`,
@@ -110,7 +110,7 @@ const dummydata = [
     },
     
     name: "Hawkesbury Family Practice",
-    category: "Medical",
+    category: "Health and Disability Services",
     address: "86 Lennox St, Richmond NSW 2753",
 
     description: `Coffee Special`,
@@ -136,7 +136,7 @@ const dummydata = [
       longitude: 151.02621328230293,
     },
     name: "Biviano's Italian Restaurant",
-    category: "Restaurants",
+    category: "Cafes, Restaurants and Catering",
     address: "628 Old Northern Road Dural NSW 2158",
 
     description: `Italian & Seafood Restaurant`,
