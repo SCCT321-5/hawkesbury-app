@@ -2,86 +2,72 @@ const categoryarray = [
   {
     id: "1",
     category: "Arts and Visual",
-    image:
-      "https://images.unsplash.com/photo-1569863959165-56dae551d4fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+    image: require('../assets/images/Arts and Visual.jpg'),
   },
   {
     id: "2",
     category: "Business",
-    image:
-      "https://images.unsplash.com/photo-1551818255-e6e10975bc17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1373&q=80",
+    image: require('../assets/images/Business.jpg'),
   },
   {
     id: "3",
     category: "Music",
-    image:
-      "https://images.unsplash.com/photo-1619229665876-f54b2276b7bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    image: require('../assets/images/Music.jpg'),
   },
   {
     id: "4",
     category: "Awards and Ceremonies",
-    image:
-      "https://images.unsplash.com/photo-1619229665876-f54b2276b7bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    image: require('../assets/images/Awards and Ceremonies.jpg'),
   },
   {
     id: "5",
     category: "Competitions",
-    image:
-      "https://images.unsplash.com/photo-1619229665876-f54b2276b7bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    image: require('../assets/images/Competitions.jpg'),
   },
   {
     id: "6",
     category: "Festive",
-    image:
-      "https://images.unsplash.com/photo-1619229665876-f54b2276b7bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    image: require('../assets/images/Festive.jpg'),
   },
   {
     id: "7",
     category: "Food and Beverage",
-    image:
-      "https://images.unsplash.com/photo-1619229665876-f54b2276b7bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    image: require('../assets/images/Food and Beverage.jpg'),
   },
   {
     id: "8",
     category: "Fundraising",
-    image:
-      "https://images.unsplash.com/photo-1619229665876-f54b2276b7bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    image: require('../assets/images/Fundraising.jpg'),
   },
   {
     id: "9",
     category: "Major Events",
-    image:
-      "https://images.unsplash.com/photo-1619229665876-f54b2276b7bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    image: require('../assets/images/Major Events.jpg'),
   },
   {
     id: "10",
     category: "Markets",
-    image:
-      "https://images.unsplash.com/photo-1619229665876-f54b2276b7bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    image: require('../assets/images/Markets.jpg'),
   },
   {
     id: "11",
     category: "Networking",
-    image:
-      "https://images.unsplash.com/photo-1619229665876-f54b2276b7bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    image: require('../assets/images/Networking.jpg'),
   },
   {
     id: "12",
     category: "Other Events",
-    image:
-      "https://images.unsplash.com/photo-1619229665876-f54b2276b7bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    image: require('../assets/images/Other Events.jpg'),
   },
   {
     id: "13",
     category: "Theatre and Performance",
-    image:
-      "https://images.unsplash.com/photo-1619229665876-f54b2276b7bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    image: require('../assets/images/Theatre and Performance.jpg'),
   },
   {
     id: "14",
     category: "Trade and Agriculture Shows",
-    image:
-      "https://images.unsplash.com/photo-1619229665876-f54b2276b7bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    image: require('../assets/images/Trade and Agriculture Shows.jpg'),
   },
 ];
 export default categoryarray;
